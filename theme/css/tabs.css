@@ -1,0 +1,6 @@
+.tab:hover{
+    background-color: rgb(28, 68, 64);
+}
+.tabactive{
+    background-color: rgb(28, 68, 64);
+}

@@ -1,0 +1,66 @@
+body{
+    overflow: auto !important;
+}
+
+.tabla {
+    overflow: scroll;
+    max-height: 200px;
+}
+
+.clicked{
+    background-color: #bfd3e4!important;
+}
+
+.card:hover{
+    background-color: #bfd3e4!important;
+}
+
+
+.list-group{
+    max-height: 200px;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.list-group li{
+    border: 1px solid #ccc !important;
+    padding-left: 0px !important;
+}
+.list-group li:hover{
+    background-color: rgb(128, 144, 179);
+}
+
+.listcliked{
+    background: #bfd3e4 !important;
+}
+
+.trlist:hover{
+    background: #bfd3e4 !important;
+}
+
+.contraste{
+    background: #f5f5f5 !important;
+}
+
+.textboxprecio{
+    text-align: right;
+}
+
+.cardfix{
+
+    text-align: center;
+}
+
+.sinpadding{
+    padding-left: 0.5px;
+}
+.imagenblock{
+    display: block;
+    text-align: center;
+}
+
+.comentarioTr{
+     width: 33% !important;
+}
