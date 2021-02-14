@@ -32,7 +32,7 @@
 
 <nav class="navbar navbar-dark bg-primary">
     <a target="_blank" href="../request/presupuesto_pdf.php?presupuesto=<?=$presupuestoid?>&paciente=<?=$pacienteid?>" class="btn btn-primary btn-lg" style="background:black; color:white;" id="btnimprimir" name="btnimprimir">Imprimir</a>
-    <a target="_blank" href="lista_presupuestos.php?pacienteId=<?=$pacienteid?>" class="btn btn-primary btn-lg" style="background:red; color:white;" id="btnsalir" name="btnsalir">Salir</a>
+    <a href="lista_presupuestos.php?pacienteId=<?=$pacienteid?>" class="btn btn-primary btn-lg" style="background:red; color:white;" id="btnsalir" name="btnsalir">Salir</a>
     <h3 style="display:inline-block ; margin-left:40px;">   Presupuesto para : <?=$pacienteNombre?></h3>
 </nav>
 
@@ -139,7 +139,7 @@
     <br>
 
     <a target="_blank" href="../request/presupuesto_pdf.php?presupuesto=<?=$presupuestoid?>&paciente=<?=$pacienteid?>" class="btn btn-primary btn-lg" style="background:black; color:white;" id="btnimprimir" name="btnimprimir">Imprimir</a>
-    <a target="_blank" href="lista_presupuestos.php?pacienteId=<?=$pacienteid?>" class="btn btn-primary btn-lg" style="background:red; color:white;" id="btnsalir" name="btnsalir">Salir</a>
+    <a href="lista_presupuestos.php?pacienteId=<?=$pacienteid?>" class="btn btn-primary btn-lg" style="background:red; color:white;" id="btnsalir" name="btnsalir">Salir</a>
    
 </div>
 

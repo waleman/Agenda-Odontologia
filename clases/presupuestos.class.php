@@ -187,6 +187,19 @@ class presupuestos extends conexion {
     }
 
 
+    public function eliminarPresupuesto($presupuestoid){
+        $query = "DELETE FROM presupuestos WHERE PresupuestoId='$presupuestoid'";
+        $resp = parent::nonQuery($query);
+        $query ="DELETE FROM presupuestos_detalle WHERE PresupuestoId='$presupuestoid'";
+        $resp2 = parent::nonQuery($query);
+        if($resp > 0 ){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
 
 }
 

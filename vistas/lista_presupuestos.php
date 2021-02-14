@@ -54,6 +54,7 @@ $listaPresupuestos = $_presupuestos->obtenerPresupuestosPaciente($pacienteId);
                             <th scope="col">Codigo</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Fecha de creacion</th>
+                            <th scope="col">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -69,6 +70,7 @@ $listaPresupuestos = $_presupuestos->obtenerPresupuestosPaciente($pacienteId);
                                             <td >$codigo</td>
                                             <td >$nombre</td>
                                             <td>$fecha</td>
+                                            <td>  <a data-borrar='$presupuestoId' class='btn btn-danger btn-raised btn-xs'><i class='zmdi zmdi-delete'></i><div class='ripple-container'></div></a></td>
                                         </tr>
                                     ";
                                  }
