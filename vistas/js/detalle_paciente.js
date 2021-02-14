@@ -45,7 +45,6 @@ $( document ).ready(function(){
             success: function(data){
                 $(".loader").hide();
                 location.reload();
-                // $("#divprovincia").html(data);
             },
             
         });

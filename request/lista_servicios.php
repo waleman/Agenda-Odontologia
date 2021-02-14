@@ -12,7 +12,7 @@ foreach ($listaServicios as $key => $value) {
     echo "
         <li class='list-group-item' id='$id'>
             $nombre
-        </li> 
+        </li>  
     ";
 }
 

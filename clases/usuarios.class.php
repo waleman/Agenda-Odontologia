@@ -82,7 +82,7 @@ class usuarios extends conexion{
 
 
      public function cambiarContraseña($usuario,$password){
-        $password = parent::sanatizeItem($password,'sting');
+        $password = parent::sanatizeItem($password,'string');
         $password = parent::encriptar($password);
         $query ="UPDATE usuarios SET Password ='$password' WHERE UsuarioId='$usuario'";
         $verificar = parent::nonQuery($query);

@@ -9,7 +9,7 @@ $_consultas = new consultas;
 
 
 
-
+ 
 //print_r($_template->checkLogin());
  
 
@@ -17,6 +17,7 @@ if(!isset($_SESSION['Parrot']['Usuario'])){
 	header("Location: ../index.php");
 	die();
 }
+
 
 
 

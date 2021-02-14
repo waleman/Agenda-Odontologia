@@ -15,7 +15,7 @@
     $presupuestoid = "";
     if(isset($_GET['id'])){ $presupuestoid = $_GET['id'];}
     $pacienteid = "";
-    if(isset($_GET['paciente'])){ $pacienteid = $_GET['paciente'];}
+    if(isset($_GET['paciente'])){ $pacienteid = $_GET['paciente']; }
     
     echo "
         <link href='../theme/odontograma/css/odontograma.css' rel='stylesheet'>
@@ -24,6 +24,7 @@
 
     //datos del paciente
     $pacienteNombre = $_pacientes->obtenerNombre($pacienteid);
+
     //verificar que no existan datos anteriores
     $tabla = $_presupuestos->impirmirTabla($presupuestoid);
 
@@ -47,7 +48,7 @@
               <h4>Categorias</h4>
               <div class="row">
                     <div class="col-sm-6 col-md-6 sinpadding">
-                        <div class="card" id="btnobturacion" >
+                        <div class="card" id="btnobturacion" > 
                             <div class="card-body cardfix">
                                 <img src="../public/imagenes/fractura.svg" alt="" width="30px">
                             

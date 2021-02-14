@@ -16,8 +16,6 @@ class template{
                 <title>$titulo</title>
                 <meta charset='UTF-8'>
                 <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
-                <link rel='stylesheet' href='../theme/css/main.css'>
-                <link rel='stylesheet' href='../theme/css/fieldset.css'>
                 <!--====== Scripts -->
                 <script src='../theme/js/jquery-3.1.1.min.js'></script>
                 <script src='../theme/js/bootstrap.min.js'></script>
@@ -26,7 +24,14 @@ class template{
                 <script src='../theme/js/jquery.mCustomScrollbar.concat.min.js'></script>
                 <script src='../theme/js/main.js'></script>
                 <script src='../theme/alert/alertify.min.js'></script>
+                <script src='../theme/js/tablas.js'></script>
                 <!-- <script src='../theme/js/afk.js'></script> -->
+              
+              
+                <link rel='stylesheet' href='../theme/css/main.css'>
+                <link rel='stylesheet' href='../theme/css/fieldset.css'>
+                <link rel='stylesheet' href='../theme/css/tablas.css'>
+
                 <link rel='stylesheet' href='../theme/alert/css/alertify.min.css'>
                 <link rel='stylesheet' href='../theme/alert/css/themes/bootstrap.min.css'>
 
@@ -269,6 +274,8 @@ class template{
                     </div>
                 </div>
             </div>
+
+       
 
     
         </body>

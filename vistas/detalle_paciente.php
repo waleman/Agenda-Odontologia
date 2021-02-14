@@ -28,7 +28,6 @@ $pacienteId = $_GET['pacienteId'];
 echo"<script>let pacienteId = $pacienteId;</script>";
 
 if(isset($_POST['btnguardarpaciente'])){
-    //print_r($_POST);
     $codigo = $_POST['txtcodigo'];
     $nombre = $_POST['txtnombre'];
     $nif = $_POST['txtnif'];
@@ -64,7 +63,7 @@ if(isset($_POST['btnguardarpaciente'])){
         die();
     }else{
         echo "<script>
-        let usuarioId = $usuarioId;
+        let usuarioId = '$usuarioId';
         </script>";
     }
 
@@ -102,7 +101,6 @@ if(isset($_POST['btnguardarpaciente'])){
     $ListaPaises = $_pacientes->obtenerPaises();
     $ListaProvincias = $_pacientes->obtenerProvincias($pais);
     $ListaPoblaciones = $_pacientes->obtenerPoblaciones($provincia);
-
 
 
 ?>
@@ -144,12 +142,12 @@ if(isset($_POST['btnguardarpaciente'])){
                                     </div>  
                                     <div class="col-sm-3">
                                         <label for="txttelefono" style="color:#009688">Codigo postal</label>
-                                        <input type="text" class="form-control" id="txtcodigopostal" name="txtcodigopostal"  placeholder="Direccion del paciente" value="<?=$codigoPostal?>">
+                                        <input type="text" class="form-control" id="txtcodigopostal" name="txtcodigopostal"  placeholder="CP" value="<?=$codigoPostal?>">
                                     </div>                                    
                                 </div>
                                 <div class="form-group ">
                                     <div class="col-sm-3">
-                                        <label for="cbogenero" style="color:#009688">Pais</label>
+                                        <label for="cbopais" style="color:#009688">Pais</label>
                                         <select class="form-control" id="cbopais" name="cbopais">
                                           <option value='0' selected disabled>- Seleccione un pais -</option>
                                             <?php 
@@ -171,7 +169,7 @@ if(isset($_POST['btnguardarpaciente'])){
                                         </select>
                                     </div>  
                                     <div class="col-sm-3" id="divprovincia">
-                                        <label for="cbogenero" style="color:#009688">Provincia</label>
+                                        <label for="cboprovincia" style="color:#009688">Provincia</label>
                                         <select class="form-control" id="cboprovincia" name="cboprovincia">
                                           <option value='0' selected disabled>- Seleccione Provincia -</option>
                                             <?php 
@@ -202,11 +200,11 @@ if(isset($_POST['btnguardarpaciente'])){
                                                     $poblacionNombre = $value['Nombre'];
                                                     if($poblacionId == $poblacion){
                                                         echo "
-                                                        <option value='$poblacionId' selected>$poblacionNombre</option>
+                                                            <option value='$poblacionId' selected>$poblacionNombre</option>
                                                         ";
                                                     }else{
                                                         echo "
-                                                        <option value='$poblacionId' >$poblacionNombre</option>
+                                                          <option value='$poblacionId' >$poblacionNombre</option>
                                                         ";
                                                     }
 
@@ -220,7 +218,7 @@ if(isset($_POST['btnguardarpaciente'])){
                                         <label for="cbogenero" style="color:#009688">Genero</label>
                                         <select class="form-control" id="cbogenero" name="cbogenero">
                                             <?php 
-                                                if($pacienteGenero == "M"){
+                                                if($Genero == "M"){
                                                     echo "
                                                     <option value='M' selected>Masculino</option>
                                                     <option value='F'>Femenino</option>

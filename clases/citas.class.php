@@ -38,7 +38,7 @@ class citas extends conexion {
         if($datos){
             return $datos;
         }else{
-            return false;
+            return array();
         }
     } 
 

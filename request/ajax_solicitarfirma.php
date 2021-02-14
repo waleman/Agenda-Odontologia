@@ -7,19 +7,15 @@ $solicitudId = $_solicitud->crearsolicitud($paciente);
 
 $i = 0;
 while ($i == 0) :
-
-
         $espera = $_solicitud->verEstadoSolicitud($solicitudId);
-        if($espera == 1){
+        echo "el estado es $espera";
+        if($espera == 'Inactivo'){
                 $i = 1;
         }
-
-   
     sleep(3);
 endwhile;
 
 
-echo "LPTM";
 
 
 ?>

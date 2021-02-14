@@ -3,8 +3,6 @@ require_once 'clases/solicitudes.class.php';
 $_solicitud = new solicitud;
 
 
-
-
 $datosSolicitud = $_solicitud->obtenerTexto();
 $finalidad = $datosSolicitud["Finalidad"];
 $Legitimizacion = $datosSolicitud["Legitimizacion"]; 
@@ -183,10 +181,13 @@ if(isset($_POST['btnguardar'])){
                  <p style="width:80%"><?=$declara?></p>
         </div>
                <br>
+               <div style="text-align:center">
+               
                  <canvas id='canvas' height="200" width="550px" style=" border: 1px solid #007bff; ">
                      <p>Tu navegador no soporta canvas</p>
                  </canvas>
                  <p>FIRMA</p>
+               </div>
                </div>
                <input type='hidden' name='imagen' id='imagen' />
                <script type="text/javascript">
@@ -299,12 +300,11 @@ if(isset($_POST['btnguardar'])){
                </script>
             </div>
             <div class="row" style="text-align:center">
-              <div class="col-lg-8 col-md-12 col-xs-12 " style="text-align:center" >
+              <div class="col-lg-8 col-md-12 col-xs-12 " >
                   <button type="submit" class="btn btn-primary btn-lg " name="btnguardar" id="btnguardar" onclick='GuardarTrazado()'>Finalizar</button>
                   <a href="solicitudes.php"  class="btn btn-danger btn-lg " >Cancelar</a>
                   <br><br><br><br>
               </div>
-
             </div>          
         </form> 
     </div>

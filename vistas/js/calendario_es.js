@@ -11,8 +11,8 @@ function fechaCompleta(date){
 }
 
 function horaCompleta(date){
-    hora = date.getHours();
-    min = date.getMinutes();
+   var hora = date.getHours();
+   var min = date.getMinutes();
     if(min  == 0){ min = "00"}
      if (hora <= 9){
        hora = "0" + hora;
@@ -23,7 +23,12 @@ function horaCompleta(date){
 
 function horaFin(date,tiempo){
     var hora = date.getHours();
-    var suma = (parseInt(min) +30);
+    var min = date.getMinutes();
+    var dur = tiempo.substr(-2)
+   
+    var suma = (parseInt(min) + parseInt(dur));
+
+
     if(suma  == 60){ 
       suma = "00";
       hora =  parseInt(hora) + 1;
@@ -32,6 +37,8 @@ function horaFin(date,tiempo){
         hora = "0" + hora;
       }
     var fin =  hora  + ':' + suma  ;
+
+
     return fin;
 }
 
@@ -41,6 +48,7 @@ function horaFin(date,tiempo){
 document.addEventListener('DOMContentLoaded', function() {
         var Hinicio = document.getElementById('txtCalendarioInicio').value;
         var Hfin = document.getElementById('txtCalendarioFin').value;
+        var duracion = document.getElementById('txtduracion').value;
         if(duracion <= 9){ 
             duracion = "00:0" + duracion;
          }else if(duracion >= 10 && duracion <= 59){
@@ -72,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
         minTime: Hinicio, 
         maxTime: Hfin, 
         slotDuration: duracion,
-        slotLabelInterval: 30,
+        slotLabelInterval: duracion,
         defaultView: 'timeGridWeek',
         locale: initialLocaleCode,
         buttonIcons: true, 
@@ -112,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
             $("#txtfecha").val(fecha);
             var inicio = horaCompleta(date.date);
             $("#txthorainicio").val(inicio);
-            var fin = horaFin(date.date,15);
+            var fin = horaFin(date.date,duracion);
             $("#txthorafin").val(fin);
             $('#crear').modal('show');
         },
@@ -271,4 +279,8 @@ $( document ).ready(function(){
         }).set('labels', {ok:'Aceptar', cancel:'Cancelar'});
     });
 
+
+  
+    
+  
 });

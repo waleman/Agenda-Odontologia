@@ -12,7 +12,7 @@ class pacientes extends conexion{
         }else{
             return 0;
         }
-    }
+    } 
 
     public function buscarPacientes($dato){
         $query ="SELECT * FROM pacientes where Nombre like '%$dato%' or Telefono like '%$dato%' or Correo like '%$dato%' LIMIT 50";
@@ -118,10 +118,10 @@ class pacientes extends conexion{
         }else {
             return array();
         }
-    }
+    } 
 
     public function obtenerProvincias($paisId){
-        $query="SELECT ProvinciaId,Nombre from provincias WHERE Estado = '1' AND PaisId ='$paisId'";
+        $query="SELECT ProvinciaId,Nombre from provincias WHERE Estado = 'Activo' AND PaisId ='$paisId'";
         $resp = parent::obtenerDatos($query);
         if($resp){
             return $resp;
@@ -131,7 +131,7 @@ class pacientes extends conexion{
     }
 
     public function obtenerPoblaciones($provinaciaId){
-        $query="SELECT LocalidadId,Nombre from localidades WHERE Estado = '1' AND ProvinciaId ='$provinaciaId'";
+        $query="SELECT LocalidadId,Nombre from localidades WHERE Estado = 'Activo' AND ProvinciaId ='$provinaciaId'";
         $resp = parent::obtenerDatos($query);
         if($resp){
             return $resp;
@@ -141,7 +141,7 @@ class pacientes extends conexion{
     }
 
     public function obtenerNombre($pacienteId){
-        $query = "SELECT * from pacientes WHERE PacienteId='342'";
+        $query = "SELECT Nombre from pacientes WHERE PacienteId='$pacienteId'";
         $resp = parent::obtenerDatos($query);
         if($resp){
             return $resp[0]['Nombre'];

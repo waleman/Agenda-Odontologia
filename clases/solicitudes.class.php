@@ -28,7 +28,7 @@ class solicitud extends conexion {
 
 
     function obtenerTexto(){
-        $query ="SELECT * from consentimiento WHERE Estado='1'";
+        $query ="SELECT * from consentimiento WHERE Estado='Activo'";
         $datos = parent::obtenerDatos($query);
         if($datos){
             return $datos[0];
@@ -91,7 +91,7 @@ class solicitud extends conexion {
 
 
     function actualizarSolicitud($solicitudId){
-        $query="UPDATE solicitudes SET Estado = '1' WHERE SolicitudId ='$solicitudId'";
+        $query="UPDATE solicitudes SET Estado = 'Inactivo' WHERE SolicitudId ='$solicitudId'";
         $resp = parent::nonQuery($query);
         if($resp > 0){
             return true;
@@ -102,7 +102,7 @@ class solicitud extends conexion {
  
 
     function buscarSolicitudActiva(){
-        $query = "select SolicitudId from solicitudes where Estado = '0' order by Fecha desc";
+        $query = "select SolicitudId from solicitudes where Estado = 'Activo' order by Fecha desc";
         $resp = parent::obtenerDatos($query);
         if($resp){
             return $resp[0]['SolicitudId'];

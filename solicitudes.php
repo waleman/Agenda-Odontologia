@@ -98,7 +98,7 @@ if(isset($_POST["btnbuscarsolicitud"])){
 
             <img src="public/imagenes/contrato.svg" alt="imagen de contrato" width="100"><br><br>
             <form method="post">
-            <button type="submit" class="btn btn-primary" name="btnbuscarsolicitud">Consentimiento informado</button>
+             <button type="submit" class="btn btn-primary" name="btnbuscarsolicitud">Consentimiento informado</button>
             </form>
             <br><br>
 

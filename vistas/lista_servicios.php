@@ -65,7 +65,7 @@ $listaCategorias = $_servicios->obtenerCategorias();
         <div class="full-box" style="padding: 30px 10px;">
                 <div class="container">
                         <div class="table-responsive" id="tablapacientes">
-                            <table class="table table-striped table-bordered table-hover w-auto"  >
+                            <table class="table tables table-striped table-bordered table-hover w-auto"  >
                                 <thead  class="">
                                     <tr class="bg-primary">
                                         <th>Servicio</th>
